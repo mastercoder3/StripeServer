@@ -18,8 +18,8 @@ router.route('/payments').post((req, res) => {
     console.log(token);
    let id = token.id;
     stripe.charges.create({
-        amount: amount,
-        currency: 'aed',
+        amount: String(amount),
+        currency: 'dkk',
         description: 'Tracking Live Payment Transaction',
         source: id
   
